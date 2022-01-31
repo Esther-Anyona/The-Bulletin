@@ -54,13 +54,14 @@ def process_sources(sources_list):
 
 def get_articles(id):
     get_article_details_url = art_url.format(id,api_key)
+    print(get_article_details_url)
     with urllib.request.urlopen(get_article_details_url) as url:
         get_articles_data = url.read()
         get_articles_response = json.loads(get_articles_data)
         source_articles = get_articles_response
 
 
-        source_articles = None
+        # source_articles = None
 
         if get_articles_response['articles']:
             source_articles_list = get_articles_response['articles']
@@ -73,8 +74,8 @@ def process_articles(articles):
     '''
     source_articles = []
     for article in articles:
-        # id = article.get('id')
-        # name = article.get('name')
+        id = article.get('id')
+        name = article.get('name')
         author = article.get('author')
         title = article.get('title')
         description = article.get('description')
@@ -84,7 +85,7 @@ def process_articles(articles):
         content = article.get('content')
 
         if url:
-            article_object = NewsArticle(author, title,description, url, urlToImage, publishedAt, content)
+            article_object = NewsArticle(id, name, author, title,description, url, urlToImage, publishedAt, content)
             source_articles.append(article_object)
 
     return source_articles
