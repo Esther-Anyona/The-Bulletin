@@ -10,7 +10,7 @@ api_key = app.config['API_KEY']
 # News Source base url
 base_url = app.config['BULLETIN_API_BASE_URL']
 
-def get_news(sources):
+def get_news():
     get_news_url = base_url.format(api_key)
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
@@ -40,7 +40,9 @@ def process_sources(sources_list):
         category = source_item.get('category')
         language = source_item.get('language')
         country = source_item.get('country')
-        source_object = NewsSource(id, name, description, url, category, language, country)
-        news_sources.append(source_object)
 
-return news_sources
+        if id:
+            source_object = NewsSource(id, name, description, url, category, language, country)
+            news_sources.append(source_object)
+
+    return news_sources
