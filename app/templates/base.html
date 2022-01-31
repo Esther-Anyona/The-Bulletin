@@ -1,19 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title %}
-    <title>{{name}}</title>
-    {% else %}
-    <title>Welcome to The Bulletin</title>
-    {% endif %}
-</head>
-<body>
-    Content block
-    {% block content %}
-    {% endblock %}
-    
-</body>
-<!- </html>  -->
-
 {% extends 'bootstrap/base.html'%}
+<!-- navbar -->
+{% block navbar%}
+    {% include 'navbar.html' %}
+{% endblock %}
