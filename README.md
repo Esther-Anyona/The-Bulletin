@@ -4,6 +4,7 @@
 
 ## Table of Contents
 <hr>
+
 1. Description
 1. BDD
 1. Installation Requirements
@@ -37,7 +38,7 @@ As a user, I would like to:
 * Run $ git clone https://github.com/Esther-Anyona/The-Bulletin.git on your terminal
 
 ### Running the Application
-After cloning, 
+After cloning, in the terminal: 
 * $ cd The-Bulletin
 * $ python3 -m venv virtual (to create a virtual environment)
 * $ source virtual/bin/activate (to activate virtual environment)
@@ -49,7 +50,7 @@ After cloning,
 <!-- To be done -->
 
 ### Bugs
-No known bugs
+No known bugs. Pull requests encouraged to improve the app.
 
 ### Technologies used
 * Python3.8
