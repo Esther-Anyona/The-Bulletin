@@ -13,3 +13,5 @@ class NewsSource:
 class NewsArticle:
     '''
     Class to define News articles
+    '''
+    pass
