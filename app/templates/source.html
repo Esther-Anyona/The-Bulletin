@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+<!-- Content block -->
+{% block content %}
+<div class="container-fluid">
+    <h2 class="text-center mt-50 p-20">ARTICLES</h2>
+    <div class="row">
+        {% for article in articles %}
+        <ul>
+            <li>{{article.title}}</li>
+        </ul>
+            <div class="col-md-3 d-flex justify-content-center source-body">
+                <div class="card bg-dark">
+                    <div class="card-body">
+                                <a href="{{ article.url }}" target="_blank">
+                                    <h4 class="card-title">{{ articles.source }}</h4>
+                                </a> 
+                                <p class="card-text">{{article.description | truncate(100)}}</p> 
+                                <p class="card-footer">{{article.publishedAt}}</p>                     
+
+                    </div>
+                  </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
