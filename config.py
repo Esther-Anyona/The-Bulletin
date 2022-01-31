@@ -1,11 +1,11 @@
-import os
+# import os
 
 class Config:
     '''
     General configuration parent class
     '''
     BULLETIN_API_BASE_URL = 'https://newsapi.org/v2/top-headlines/sources?apiKey={}'
-    BULLETIN_API_KEY = os.environ.get('API_KEY')
+    # BULLETIN_API_KEY = os.environ.get('API_KEY')
 class ProdConfig(Config):
     '''
     Production  configuration child class
@@ -13,7 +13,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    pass
+    # pass
 
 class DevConfig(Config):  
     '''
