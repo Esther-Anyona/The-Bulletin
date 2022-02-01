@@ -48,7 +48,7 @@ After cloning, in the terminal:
 * $ ./start.sh to execute
 
 ## Running unit tests
-<!-- To be done -->
+* $ python3.8 manager.py test
 
 ### Bugs
 No known bugs. Pull requests encouraged to improve the app.
