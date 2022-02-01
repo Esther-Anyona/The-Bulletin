@@ -22,9 +22,9 @@
 The Bulletin is an application that consumes the News API to provide users with a means of viewing news from around the world as broadcast by various sources. it is built using the Python Flask framework.
 
 ### BDD
-As a user, I would like to:
+The user is able to:
 * See various news sources on the homepage of the application.
-* Select a news source and see all news articles from the selected news source in the application.
+* Select a news source on click and see all news articles from the selected news source in the application.
 * See the image, description and the time a news article was created.
 * Click on an article and read the full article on the source website.
 
@@ -44,7 +44,8 @@ After cloning, in the terminal:
 * $ source virtual/bin/activate (to activate virtual environment)
 * $ pip install flask
 * pip install Flask-Bootstrap
-* $ ./run.py to execute
+* pip install flask-script
+* $ ./start.sh to execute
 
 ## Running unit tests
 <!-- To be done -->
