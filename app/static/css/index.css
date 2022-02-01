@@ -1,9 +1,27 @@
 span{
-    color: royalblue;
+    color: rgb(9, 27, 82);
 }
-*{
-    background-color: rgb(8, 8, 8);
+body{
+    background-color: #f1faee ;
+}
+.card{
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 .card-title{
-    color: tomato;
+    color: #ff6347;
+}
+a{
+    text-decoration: none;
+}
+.card-footer>h6{
+    color: #ff6347;
+}
+.copyright{
+    color: #ff6347;
+    text-align: center;
+    height: 55px;
+    padding-top: 20px;
+    font-style: italic;
+    font-size: 15px;
 }
