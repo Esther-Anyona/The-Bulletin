@@ -1,3 +1,4 @@
-export API_KEY=b5695131a7ed43618f0b554656f2e89d
+export API_KEY=c963db0ee5a34c68b623f1f6d535aaea
+
 
 python3 manage.py server
