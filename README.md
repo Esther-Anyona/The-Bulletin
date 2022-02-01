@@ -45,8 +45,8 @@ After cloning, in the terminal:
 * $ python3 -m venv virtual (to create a virtual environment)
 * $ source virtual/bin/activate (to activate virtual environment)
 * $ pip install flask
-* pip install Flask-Bootstrap
-* pip install flask-script
+* $ pip install Flask-Bootstrap
+* $ pip install flask-script
 * $ ./start.sh to execute
 
 ## Running unit tests
@@ -58,6 +58,7 @@ No known bugs. Pull requests encouraged to improve the app.
 ### Technologies used
 * Python3.8
 * Flask 2.0.2
+* Bootstrap v5
 
 ### Contacts
 You can reach me through:
