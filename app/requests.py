@@ -60,9 +60,6 @@ def get_articles(id):
         get_articles_response = json.loads(get_articles_data)
         source_articles = get_articles_response
 
-
-        # source_articles = None
-
         if get_articles_response['articles']:
             source_articles_list = get_articles_response['articles']
             source_articles = process_articles(source_articles_list)

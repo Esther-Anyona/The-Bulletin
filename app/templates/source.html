@@ -3,25 +3,26 @@
 <!-- Content block -->
 {% block content %}
 <div class="container-fluid">
-    <h2 class="text-center mt-50 p-20">ARTICLES</h2>
-    <h4 class="text-center mt-50 p-20">{{id|title()}}</h4>
-    <div class="row">
-        {% for article in article %}
-        <div class="card bg-dark">
-            <div class="col-sm-6 col-md-6 col-lg-6">
-            <img src="{{article.urlToImage}}" width= "50%" height="50%" alt="">
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 d-flex justify-content-center source-body">
-                <div class="card-body">
-                    <a href="{{ article.url }}" target="_blank">
-                        <h4 class="card-title">{{ article.title }}</h4>
-                    </a> 
-                    <p class="card-text">{{article.description}}</p> 
-                    <p class="card-footer">{{article.publishedAt}}</p>                     
-                    </div>
+    <h3 class="text-center m-50 p-20"><span>ARTICLES BY {{id|upper()}}</span></h3>
+    {% for article in article %}
+    <div class="row p-30">
+        <div class="col-md-3 d-flex justify-content-center ">
+            <img class="card-img-top"src="{{article.urlToImage}}" width= "100%" alt="">
+        </div>
+        <div class="col-md-3 d-flex justify-content-center">
+            <div class="card-body">
+                <a href="{{ article.url }}" target="_blank">
+                    <h5 class="card-title">Author(s): {{ article.author }}</h5>
+                </a> 
+                <p class="card-text">{{article.description}}</p> 
+                <div class="card-footer">
+                    <p><span>Source:</span> {{id|title()}}</p>                     
+                    <p><span>Date published:</span> {{article.publishedAt}}</p> 
+                </div>
+                                    
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
