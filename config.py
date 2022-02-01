@@ -1,4 +1,4 @@
-# import os
+import os
 
 class Config:
     '''
@@ -6,7 +6,9 @@ class Config:
     '''
     BULLETIN_API_BASE_URL = 'https://newsapi.org/v2/top-headlines/sources?apiKey={}'
     ARTICLES_API_BASE_URL = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
-    # BULLETIN_API_KEY = os.environ.get('API_KEY')
+    API_KEY = os.environ.get('API_KEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+
 class ProdConfig(Config):
     '''
     Production  configuration child class
@@ -14,7 +16,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    # pass
+    pass
 
 class DevConfig(Config):  
     '''
@@ -25,7 +27,7 @@ class DevConfig(Config):
     '''  
     DEBUG = True
     
-# config_options ={
-#     'development': DevConfig,
-#     'production': ProdConfig
-# }
+config_options ={
+    'development': DevConfig,
+    'production': ProdConfig
+}

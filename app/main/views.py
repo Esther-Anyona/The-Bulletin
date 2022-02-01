@@ -1,9 +1,9 @@
-from flask import render_template
-from app import app
-from .requests import get_news, get_articles
+from flask import render_template,request,redirect,url_for
+from . import main
+from ..requests import get_news, get_articles
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
     '''
     View root page function that returns the index page and its data
@@ -12,7 +12,7 @@ def index():
     title = 'Welcome to The Bulletin'
     return render_template('index.html', title = title, source = source)
 
-@app.route('/source/<id>')
+@main.route('/source/<id>')
 def source(id):
     '''
     View sources page function that returns the articles from the source data
