@@ -2,6 +2,8 @@
 ## Developed by:
 [Esther-Anyona](https://github.com/Esther-Anyona)
 
+Hosted on heroku: https://the-bulletin.herokuapp.com/
+
 ## Table of Contents
 <hr>
 
@@ -19,7 +21,7 @@
 
 
 ### Description
-The Bulletin is an application that consumes the News API to provide users with a means of viewing news from around the world as broadcast by various sources. it is built using the Python Flask framework.
+The Bulletin is an application that consumes the News API to provide users with a means of viewing news from around the world as broadcast by various sources. It is built using the Python Flask framework.
 
 ### BDD
 The user is able to:
@@ -48,7 +50,7 @@ After cloning, in the terminal:
 * $ ./start.sh to execute
 
 ## Running unit tests
-* $ python3.8 manager.py test
+* $ python3.8 manage.py test
 
 ### Bugs
 No known bugs. Pull requests encouraged to improve the app.
